@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectWireframe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/85d5cfaaee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search city"
+                autofocus="on"
+                autocomplete="off"
+                id="city-search"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search!"
+                class="form-control btn btn-primary w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-warning w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-6">
+            <h1 class="location" id="city-name">Zagreb, HR</h1>
+          </div>
+          <div class="col-6">
+            <span id="current-temp"></span><span class="units">°C</span>
+          </div>
+        </div>
+
+        <div class="current-conditions">
+          <div class="row">
+            <div class="col-6">
+              <ul>
+                <li id="date"></li>
+                <li id="description"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind Speed: <span id="wind-speed"></span>km/h</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div id="current-temp-conditions"><h2></h2></div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="row" id="5-day-weather">
+          <div class="col" class="day-of-week">
+            <div class="day">TUE</div>
+
+            <i class="fa-solid fa-cloud-sun weather-icon"></i>
+            <div class="temperature">21°C</div>
+          </div>
+
+          <div class="col" class="day-of-week">
+            <div class="day">WED</div>
+
+            <i class="fa-solid fa-cloud weather-icon"></i>
+            <br />
+            <div class="temperature">18°C</div>
+          </div>
+          <div class="col" class="day-of-week">
+            <div class="day">THU</div>
+
+            <i class="fa-solid fa-cloud-rain weather-icon"></i>
+            <br />
+            <div class="temperature">14°C</div>
+          </div>
+          <div class="col" class="day-of-week">
+            <div class="day">FRI</div>
+
+            <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
+            <br />
+            <div class="temperature">12°C</div>
+          </div>
+          <div class="col" class="day-of-week">
+            <div class="day">SAT</div>
+
+            <i class="fa-solid fa-cloud weather-icon"></i>
+            <br />
+            <div class="temperature">7°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

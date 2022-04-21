@@ -26,107 +26,110 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Search city"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-search"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search!"
+                  class="form-control btn btn-primary w-100"
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  class="btn btn-warning w-100"
+                  id="current-location-button"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
           <div class="row">
             <div class="col-6">
-              <input
-                type="search"
-                placeholder="Search city"
-                autofocus="on"
-                autocomplete="off"
-                id="city-search"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search!"
-                class="form-control btn btn-primary w-100"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-warning w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
-        <div class="row">
-          <div class="col-6">
-            <h1 class="location" id="city-name">Zagreb, HR</h1>
-          </div>
-          <div class="col-6">
-            <span id="current-temp"></span><span class="units">°C</span>
-          </div>
-        </div>
-
-        <div class="current-conditions">
-          <div class="row">
-            <div class="col-6">
-              <ul>
-                <li id="date"></li>
-                <li id="description"></li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind Speed: <span id="wind-speed"></span>km/h</li>
-              </ul>
+              <h1 class="location" id="city-name">Zagreb, HR</h1>
             </div>
             <div class="col-6">
-              <div id="current-temp-conditions"><h2></h2></div>
+              <span id="current-temp"></span><span class="units">°C | °F</span>
             </div>
           </div>
+
+          <div class="current-conditions">
+            <div class="row">
+              <div class="col-6">
+                <ul>
+                  <li id="date"></li>
+                  <li id="description"></li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind Speed: <span id="wind-speed"></span>km/h</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <div id="current-temp-conditions"><h2></h2></div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="row" id="5-day-weather">
+            <div class="col" class="day-of-week">
+              <div class="day">TUE</div>
+
+              <i class="fa-solid fa-cloud-sun weather-icon"></i>
+              <div class="temperature">21°C</div>
+            </div>
+
+            <div class="col" class="day-of-week">
+              <div class="day">WED</div>
+
+              <i class="fa-solid fa-cloud weather-icon"></i>
+              <br />
+              <div class="temperature">18°C</div>
+            </div>
+            <div class="col" class="day-of-week">
+              <div class="day">THU</div>
+
+              <i class="fa-solid fa-cloud-rain weather-icon"></i>
+              <br />
+              <div class="temperature">14°C</div>
+            </div>
+            <div class="col" class="day-of-week">
+              <div class="day">FRI</div>
+
+              <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
+              <br />
+              <div class="temperature">12°C</div>
+            </div>
+            <div class="col" class="day-of-week">
+              <div class="day">SAT</div>
+
+              <i class="fa-solid fa-cloud weather-icon"></i>
+              <br />
+              <div class="temperature">7°C</div>
+            </div>
+          </div>
+          <br />
         </div>
-
-        <hr />
-        <div class="row" id="5-day-weather">
-          <div class="col" class="day-of-week">
-            <div class="day">TUE</div>
-
-            <i class="fa-solid fa-cloud-sun weather-icon"></i>
-            <div class="temperature">21°C</div>
-          </div>
-
-          <div class="col" class="day-of-week">
-            <div class="day">WED</div>
-
-            <i class="fa-solid fa-cloud weather-icon"></i>
-            <br />
-            <div class="temperature">18°C</div>
-          </div>
-          <div class="col" class="day-of-week">
-            <div class="day">THU</div>
-
-            <i class="fa-solid fa-cloud-rain weather-icon"></i>
-            <br />
-            <div class="temperature">14°C</div>
-          </div>
-          <div class="col" class="day-of-week">
-            <div class="day">FRI</div>
-
-            <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
-            <br />
-            <div class="temperature">12°C</div>
-          </div>
-          <div class="col" class="day-of-week">
-            <div class="day">SAT</div>
-
-            <i class="fa-solid fa-cloud weather-icon"></i>
-            <br />
-            <div class="temperature">7°C</div>
-          </div>
-        </div>
+        <small>
+          <a
+            href="https://github.com/marne-dp/homework-week6-GitHub"
+            target="_blank"
+            >Open-source code</a
+          >, by Marné du Preez
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/marne-dp/homework-week6-GitHub"
-          target="_blank"
-          >Open-source code</a
-        >, by Marné du Preez
-      </small>
     </div>
     <script src="src/index.js"></script>
   </body>

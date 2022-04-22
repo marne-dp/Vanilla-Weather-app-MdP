@@ -21,7 +21,7 @@ small {
 }
 
 #city-name {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #current-temp {
@@ -45,15 +45,13 @@ small {
   text-decoration: none;
 }
 
-.col {
-  color: #383d41;
-  text-align: center;
-  font-weight: bold;
-}
-.day {
+.day-of-week {
   background: #ffebcb;
   border-radius: 15px;
+  color: #383d41;
+  font-weight: bold;
   padding: 10px;
+  text-align: center;
 }
 .label {
   font-weight: bold;
@@ -99,4 +97,16 @@ small {
   color: #383d41;
   cursor: default;
   text-decoration: none;
+}
+.weather-forecast {
+  text-align: center;
+}
+.forecast-temp-max {
+  color: #ffa828;
+  font-weight: bold;
+}
+.forecast-temp-min {
+  color: #42a5f5;
+  font-weight: lighter;
+  opacity: 0.9;
 }

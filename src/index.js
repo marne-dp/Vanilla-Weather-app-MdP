@@ -45,7 +45,9 @@ function displayWeather(response) {
   console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
-  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector(
+    "#city-name"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#current-temp").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;

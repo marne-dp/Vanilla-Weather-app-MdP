@@ -43,6 +43,8 @@ function formatDate(date) {
 
 function displayWeather(response) {
   console.log(response.data);
+  console.log(response.data.weather[0].icon);
+  let iconElement = document.querySelector("#icon");
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -52,6 +54,10 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("h2").innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `src/img/${response.data.weather[0].icon}.svg`
+  );
 }
 
 function search(cityInput) {

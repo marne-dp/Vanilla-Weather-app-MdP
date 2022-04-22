@@ -23,9 +23,9 @@ small {
 #city-name {
   font-size: 50px;
 }
-#cloudy-weather {
+#icon {
   line-height: 1;
-  width: 100px;
+  width: 120px;
 }
 #current-temp {
   color: #ffa828;

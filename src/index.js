@@ -53,7 +53,7 @@ function displayWeather(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("h2").innerHTML = response.data.weather[0].description;
+  document.querySelector("h2").innerHTML = response.data.weather[0].main;
   iconElement.setAttribute(
     "src",
     `src/img/${response.data.weather[0].icon}.svg`

@@ -23,6 +23,10 @@ small {
 #city-name {
   font-size: 50px;
 }
+#cloudy-weather {
+  line-height: 1;
+  width: 100px;
+}
 #current-temp {
   color: #ffa828;
   font-size: 80px;

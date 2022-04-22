@@ -25,7 +25,7 @@ small {
 }
 #icon {
   line-height: 1;
-  width: 120px;
+  width: 80px;
 }
 #current-temp {
   color: #ffa828;
@@ -59,10 +59,6 @@ small {
   top: 80px;
   left: 400px;
 }
-.sun-icon {
-  color: #ffa828;
-  font-size: 100px;
-}
 .temperature {
   color: #ffa828;
   font-size: 20px;
@@ -82,6 +78,7 @@ small {
   padding: 20px;
 }
 .weather-app-wrapper {
+  min-width: 700px;
   max-width: 800px;
   margin: 50px auto;
 }

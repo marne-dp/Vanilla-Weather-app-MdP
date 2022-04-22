@@ -23,10 +23,7 @@ small {
 #city-name {
   font-size: 50px;
 }
-#icon {
-  line-height: 1;
-  width: 80px;
-}
+
 #current-temp {
   color: #ffa828;
   font-size: 80px;
@@ -36,6 +33,16 @@ small {
 #current-location-button {
   background-color: #ffa828;
   color: white;
+}
+#icon {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+}
+#celsius-link,
+#fahrenheit-link {
+  color: #42a5f5;
+  text-decoration: none;
 }
 
 .col {
@@ -87,4 +94,9 @@ small {
   font-size: 30px;
   padding: 20px;
   text-align: center;
+}
+.weather-temperature .active:hover {
+  color: #383d41;
+  cursor: default;
+  text-decoration: none;
 }

@@ -40,6 +40,31 @@ function formatDate(date) {
   let dayInMonth = currentTime.getDate();
   return `${day}, ${dayInMonth} ${month}, ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector(
+    "#weather-forecast-temperatures"
+  );
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["FRI", "SAT", "SUN", "MON"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="day-of-week">${day}</div>
+      <i class="fa-solid fa-cloud-rain weather-icon"></i>
+      <div class="forecast-temperature">
+        <span class="forecast-temp-max">18° </span>
+        <span class="forecast-temp-min">12° </span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeather(response) {
   console.log(response.data);
@@ -115,3 +140,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Zagreb");
+displayForecast();

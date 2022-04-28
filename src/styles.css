@@ -28,7 +28,6 @@ small {
   color: #ffa828;
   font-size: 80px;
   font-weight: 600;
-  line-height: 1;
 }
 #current-location-button {
   background-color: #ffa828;
@@ -53,21 +52,14 @@ small {
   padding: 10px;
   text-align: center;
 }
-.label {
-  font-weight: bold;
-}
 .search-form {
   margin-bottom: 40px;
-}
-.sun {
-  position: relative;
-  top: 80px;
-  left: 400px;
 }
 .temperature {
   color: #ffa828;
   font-size: 20px;
 }
+
 .units {
   color: #42a5f5;
   font-size: 20px;
@@ -75,6 +67,7 @@ small {
   position: relative;
   top: -40px;
 }
+
 .weather-app {
   background: #fffcf7;
   border: 3.5px solid #ffa92891;
@@ -82,17 +75,13 @@ small {
 
   padding: 20px;
 }
+
 .weather-app-wrapper {
   min-width: 700px;
   max-width: 800px;
   margin: 50px auto;
 }
-.weather-icon {
-  color: #42a5f5;
-  font-size: 30px;
-  padding: 20px;
-  text-align: center;
-}
+
 .weather-temperature .active:hover {
   color: #383d41;
   cursor: default;

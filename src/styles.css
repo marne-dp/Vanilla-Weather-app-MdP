@@ -1,7 +1,6 @@
 body {
   font-family: "Ubuntu", sans-serif;
 }
-
 h1,
 h2 {
   color: #42a5f5;
@@ -16,6 +15,9 @@ li {
   color: #ffa828;
 }
 small {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
   text-align: center;
   margin: 0 auto;
 }

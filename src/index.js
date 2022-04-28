@@ -40,7 +40,8 @@ function formatDate(date) {
   let dayInMonth = currentTime.getDate();
   return `${day}, ${dayInMonth} ${month}, ${hours}:${minutes}`;
 }
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector(
     "#weather-forecast-temperatures"
   );
@@ -66,6 +67,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "72474dba6fbdd6e19757ef5d68f22223";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   console.log(response.data);
   celsiusTemperature = response.data.main.temp;
@@ -84,6 +92,10 @@ function displayWeather(response) {
     "src",
     `src/img/${response.data.weather[0].icon}.svg`
   );
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(cityInput) {
@@ -140,4 +152,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Zagreb");
-displayForecast();

@@ -6,6 +6,11 @@ h2 {
   color: #42a5f5;
 }
 
+h1,
+#city-name {
+  margin: 40px auto;
+}
+
 ul {
   margin: 0;
   padding: 0;

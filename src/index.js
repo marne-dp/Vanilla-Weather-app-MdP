@@ -100,6 +100,9 @@ function displayWeather(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("h2").innerHTML = response.data.weather[0].main;
   iconElement.setAttribute(
     "src",
@@ -163,5 +166,11 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let form = document.getElementById("search-form");
+form.addEventListener("submit", function citySearch(event) {
+  event.preventDefault;
+  form.reset();
+});
 
 search("Zagreb");
